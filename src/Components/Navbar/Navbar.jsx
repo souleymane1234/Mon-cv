@@ -1,7 +1,7 @@
 import { Box, Flex, HStack, IconButton, useDisclosure, useColorMode, useColorModeValue, Stack, Button } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon } from '@chakra-ui/icons';
 import { Link } from 'react-router-dom';
-import logo from './../../Assets/logo.png';
+import logo from './../../Assets/logo-moncvenligne.png';
 
 
 export default function Navbar() {
@@ -12,7 +12,7 @@ export default function Navbar() {
         <>
             <Box id='navbar' bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
                 <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
-                    <Box><img style={{ height: '44px', cursor: 'pointer' }} className='logo' src={logo} alt="logo"
+                    <Box><img style={{ height: '80px', cursor: 'pointer' }} className='logo' src={logo} alt="logo"
                         onClick={() => window.location.reload()} /></Box>
 
                     <HStack spacing={8} alignItems={'center'}>

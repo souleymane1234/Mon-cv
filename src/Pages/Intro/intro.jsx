@@ -36,16 +36,17 @@ const IntroPage = () => {
                 py={{ base: 1.5, md: 10, sm: '14' }}>
                             <Heading
                                 fontWeight={"bold"}
-                                fontSize={{ base: '2xl', sm: '3xl', md: '4xl' }}
+                                fontSize={{ base: 'xl', sm: '2xl', md: '3xl' }}
                                 lineHeight={'110%'}>
                                 <Text as={'span'} color={'#13287e'}>
-                                    Générer rapidement votre CV en ligne avec des modèles créatifs.
+                                Faites le Premier Pas vers Votre Emploi de Rêve.
                                 </Text>
                             </Heading>
 
                             <Text color={'gray.500'} maxW={'3xl'}>
-                                Notre outils de création de CV assemblent des CV bien formatés. Grâce à cela, vous pouvez créer votre CV  professionnel en quelques étapes simples. Nous vous proposons différentes options de modèles, vous pouvez donc sélectionner le modèle qui correspond le mieux à vos besoins et à votre style.
+                                Créer un CV professionnel n'a jamais été aussi simple. Commencez dès aujourd'hui avec moncvenligne.net et faites le premier pas vers l'obtention de votre emploi de rêve.
                             </Text>
+                            <Button variant="primary"><Link to={"Modeles"}>Sélectionnez votre modèle</Link></Button>
             </Stack>
                     <Stack>
                         <Image src={acceuil} alt='home logo' my={'4'} />
@@ -62,8 +63,8 @@ const IntroPage = () => {
                             <Text style={{textAlign: "center", color: "#13287e", fontWeight: "bold", fontSize: 40}}>1</Text>
                         </div>
                         <div style={{marginLeft: 20}}>
-                            <Text style={{color: "#13287e", fontWeight: "bold", fontSize: 20}}>Sélectionnez un modèle dans notre collection</Text>
-                            <Text>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium modi assumenda.</Text>
+                            <Text style={{color: "#13287e", fontWeight: "bold", fontSize: 20}}>Remplissez vos informations</Text>
+                            <Text>Commencez par saisir les informations qui composeront le contenu de votre CV. Notre interface intuitive vous guide à travers chaque étape.</Text>
                         </div>
                     </div>
                     <div style={{flexDirection: "row", backgroundColor: "#fff", display: "flex", padding: 20, borderRadius: 10}} className="shadow p-3 mb-5 bg-white rounded">
@@ -71,8 +72,8 @@ const IntroPage = () => {
                             <Text style={{textAlign: "center", color: "#ff9b1e", fontWeight: "bold", fontSize: 40}}>2</Text>
                         </div>
                         <div style={{marginLeft: 20}}>
-                            <Text style={{color: "#13287e", fontWeight: "bold", fontSize: 20}}>Créez votre CV à l'aide de notre générateur de CV</Text>
-                            <Text>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium modi assumenda.</Text>
+                            <Text style={{color: "#13287e", fontWeight: "bold", fontSize: 20}}>Choisissez un modèle</Text>
+                            <Text>Sélectionnez un modèle de CV parmi notre collection et personnalisez-le pour qu'il reflète votre personnalité et votre style unique.</Text>
                         </div>
                     </div>
                     <div style={{flexDirection: "row", backgroundColor: "#fff", display: "flex", padding: 20, borderRadius: 10}} className="shadow p-3 mb-5 bg-white rounded">
@@ -81,7 +82,7 @@ const IntroPage = () => {
                         </div>
                         <div style={{marginLeft: 20}}>
                             <Text style={{color: "#13287e", fontWeight: "bold", fontSize: 20}}>Téléchargez votre CV</Text>
-                            <Text>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium modi assumenda.</Text>
+                            <Text>Téléchargez immédiatement votre CV une fois prêt et modifiez-le à tout moment. C’est aussi simple que cela !</Text>
                         </div>
                     </div>
             </Stack>
@@ -98,11 +99,12 @@ const IntroPage = () => {
                         </div> */}
                             <Card style={{ width: '100%', padding: 15 }}>
                                 <Card.Body>
-                                    <Card.Title style={{color: "#13287e", fontWeight: "bold", fontSize: 25, marginBottom: 60}}>Pourquoi choisir notre platforme ?</Card.Title>
-                                    <Card.Text style={{fontSize: 16, marginBottom: 60}}>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at dictum risus, non suscipit arcu. Quisque aliquam posuere tortor, sit amet convallis nunc scelerisque in.
-
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore eius molestiae facere, natus reprehenderit eaque eum, autem ipsam. Magni, error. Tempora odit laborum iure inventore possimus laboriosam qui nam. Fugit!
+                                    <Card.Title style={{color: "#13287e", fontWeight: "bold", fontSize: 25, marginBottom: 20}}>Pourquoi Choisir moncvenligne.net ?</Card.Title>
+                                        <Card.Text style={{fontSize: 16, marginBottom: 20}}>
+                                        Interface Facile à Utiliser : Créez votre CV en quelques minutes grâce à nos outils intuitifs. Aucune compétence en design ou technique n'est nécessaire.
+                                        Modèles Personnalisables : Choisissez parmi une variété de modèles conçus par des professionnels, adaptés à votre secteur et à votre style personnel.
+                                        Designs Compatibles avec les ATS : Nos CV sont optimisés pour les systèmes de suivi des candidatures (ATS), garantissant que votre candidature soit vue par les recruteurs.
+                                        Support Multilingue : Créez votre CV en plusieurs langues, ce qui facilite votre candidature à l'échelle internationale.
                                     </Card.Text>
                                     <Button variant="primary"><Link to={"Modeles"}>Sélectionnez votre modèle</Link></Button>
                                 </Card.Body>
@@ -115,31 +117,16 @@ const IntroPage = () => {
                 width={{ base: '95%', md: '47%' }}
                 spacing={{ base: 8, md: 10 }}
                 py={{ base: 1.5, md: 10, sm: '14' }}>
-                    <p style={{fontSize: 30, color: "#13287e", fontWeight: "bold"}}>Nous offrons le meilleur</p>
-                    <div style={{flexDirection: "row", display: "flex"}} >
-                        <RiCheckboxCircleLine style={{alignSelf: "center", color: "#38da9f", fontSize: 20}}/>
-                        <Text style={{marginLeft: 15, fontSize: 16, fontWeight: 600}}>Modèles de CV éprouvés pour augmenter les chances d'embauche</Text>
-                    </div>
-                    <div style={{flexDirection: "row", display: "flex"}} >
-                        <RiCheckboxCircleLine style={{alignSelf: "center", color: "#38da9f", fontSize: 20}}/>
-                        <Text style={{marginLeft: 15, fontSize: 16, fontWeight: 600}}>Conception de modèles créatifs et épurés</Text>
-                    </div>
-                    <div style={{flexDirection: "row", display: "flex"}} >
-                        <RiCheckboxCircleLine style={{alignSelf: "center", color: "#38da9f", fontSize: 20}}/>
-                        <Text style={{marginLeft: 15, fontSize: 16, fontWeight: 600}}>Créateur de CV en ligne simple et intuitif</Text>
-                    </div>
-                    <div style={{flexDirection: "row", display: "flex"}} >
-                        <RiCheckboxCircleLine style={{alignSelf: "center", color: "#38da9f", fontSize: 20}}/>
-                        <Text style={{marginLeft: 15, fontSize: 16, fontWeight: 600}}>Utilisation gratuite. Développé par des professionnels embauchés</Text>
-                    </div>
-                    <div style={{flexDirection: "row", display: "flex"}} >
-                        <RiCheckboxCircleLine style={{alignSelf: "center", color: "#38da9f", fontSize: 20}}/>
-                        <Text style={{marginLeft: 15, fontSize: 16, fontWeight: 600}}>Formatage rapide et facile de CV et de curriculum vitae</Text>
-                    </div>
-                    <div style={{flexDirection: "row", display: "flex"}} >
-                        <RiCheckboxCircleLine style={{alignSelf: "center", color: "#38da9f", fontSize: 20}}/>
-                        <Text style={{marginLeft: 15, fontSize: 16, fontWeight: 600}}>Phrases approuvées par le recruteur</Text>
-                    </div>
+                    <div style={{ width: '100%', padding: 15 }}>
+                                <Card.Body>
+                                    <Card.Title style={{color: "#13287e", fontWeight: "bold", fontSize: 30, marginBottom: 20}}>Optimisez Votre Recherche d'Emploi avec Notre Générateur de CV</Card.Title>
+                                        <Card.Text style={{fontSize: 16, marginBottom: 20}}>
+                                            <strong>Contenu CV Optimisé pour le Référencement </strong>: Nos modèles de CV sont conçus pour intégrer des mots-clés importants pour votre secteur, vous aidant à mieux vous positionner dans les résultats de recherche. <br/>
+                                            <strong>Guidance Étape par Étape </strong>: Nous vous fournissons des conseils et des exemples tout au long du processus de création du CV pour vous aider à mettre en avant vos compétences et réalisations.  <br/>
+                                            <strong>Téléchargement Instantané </strong>: Une fois votre CV prêt, téléchargez-le instantanément au format PDF et commencez à postuler à des offres d'emploi.
+                                    </Card.Text>
+                                </Card.Body>
+                     </div>
             </Stack>
                     <Stack>
                         <Image src={cvIllustration} alt='home logo' my={'4'} />
@@ -168,7 +155,7 @@ const IntroPage = () => {
             </Card>
             <Card style={{ width: '32%',  marginBottom: 50 }}>
                 <Card.Img variant="top" src={cv2} />
-                <Card.Body>
+                <Card.Body> 
                     <Button variant="outline-primary" onClick={showTheme} id='Theme2'>Utiliser le modele</Button>
                 </Card.Body>
             </Card>

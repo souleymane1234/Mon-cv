@@ -12,6 +12,8 @@
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.3.3",
     "framer-motion": "^7.10.2",
+    "html2canvas": "^1.4.1",
+    "jspdf": "^2.5.1",
     "react": "^18.2.0",
     "react-bootstrap": "^2.10.4",
     "react-dom": "^18.2.0",
@@ -19,6 +21,7 @@
     "react-router-dom": "^6.6.1",
     "react-scripts": "5.0.1",
     "react-spinners": "^0.13.7",
+    "react-to-pdf": "^1.0.1",
     "react-to-print": "^2.14.10",
     "web-vitals": "^2.1.4"
   },

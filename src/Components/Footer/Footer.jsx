@@ -1,6 +1,6 @@
 import { Box, chakra, Container, Stack, Text, Image, useColorModeValue, VisuallyHidden, } from '@chakra-ui/react';
 import { FaLinkedin, FaTwitter, FaGithub } from 'react-icons/fa';
-import logo from './../../Assets/logo.png';
+import logo from './../../Assets/logo-moncvenligne.png';
 
 
 const SocialButton = ({ children, label, href }) => {
@@ -44,7 +44,8 @@ export default function Footer() {
                 align={{ base: 'center', md: 'center' }}>
                 
                 {/* <Image style={{ height: '44px' }} src={logo} alt="logo" /> */}
-
+                <img style={{ height: '80px', cursor: 'pointer' }} className='logo' src={logo} alt="logo"
+                        onClick={() => window.location.reload()} />
                 <Text>&copy; 2024 Mon CV, Tout droit réservé</Text>
 
                 <Stack direction={'row'} spacing={2}>

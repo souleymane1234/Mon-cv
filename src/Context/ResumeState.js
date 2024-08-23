@@ -1,20 +1,36 @@
 import ResumeContext from "./ResumeContext";
 import { useState, useRef } from "react";
 import { useReactToPrint } from 'react-to-print';
+import generatePDF from 'react-to-pdf';
+import html2canvas from "html2canvas";
+import jsPDF from "jspdf";
 
 
 const ResumeState = (props) => {
 
     const componentRef = useRef();
-    const handlePrint = useReactToPrint({
-        content: () => componentRef.current,
-        onBeforePrint: () => {
-            setLoading(true)
-        },
-        onAfterPrint: () => {
-            setLoading(false)
+    const pdfRef = useRef();
+    const handlePrint = () => {
+        const input = pdfRef.current;
+        html2canvas(input).then((canvas) => {
+            const imgData = canvas.toDataURL('image/png');
+            const pdf = new jsPDF('p', 'mm', 'a4', true);
+            const pdfWidth = pdf.internal.pageSize.getWidth();
+            const pdfHeight = pdf.internal.pageSize.getHeight();
+            const imgWidth = canvas.width;
+            const imgHeight = canvas.height;
+            const ratio = Math.min(pdfWidth / imgWidth, pdfHeight / imgHeight);
+            const imgX = (pdfWidth - imgWidth * ratio) / 2;
+            const imgY = 30;
+            pdf.addImage(imgData, 'PNG', imgX, imgY, imgWidth * ratio, imgHeight * ratio);
+            pdf.save('mon Cv.pdf');
+        });
         }
-    });
+    // <button onClick={() => generatePDF(targetRef, {filename: 'page.pdf'})}>Download PDF</button>
+    // <div ref={targetRef}>
+    //    Content to be included in the PDF
+    // </div>
+
 
     const initialData = {
         personalData: {
@@ -56,7 +72,7 @@ const ResumeState = (props) => {
 
 
     return (
-        <ResumeContext.Provider value={{ initialData, selectBtn, setSelectBtn, checkAward, setCheckAward, componentRef, handlePrint, currentTheme, setCurrentTheme, showComponent, setShowComponent, loading, setLoading, themeData, setThemeData, checkProj, checkWork, setCheckProj, setCheckWork }}>
+        <ResumeContext.Provider value={{ initialData, selectBtn, setSelectBtn, checkAward, setCheckAward, componentRef, handlePrint, currentTheme, setCurrentTheme, showComponent, setShowComponent, loading, setLoading, themeData, setThemeData, checkProj, checkWork, setCheckProj, setCheckWork, pdfRef }}>
             {props.children}
         </ResumeContext.Provider >
     )
